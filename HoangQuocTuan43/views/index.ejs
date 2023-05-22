@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sinh viên</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body> 
+    <h1>Danh sách sinh viên</h1>
+    <a href="them-sinh-vien"><button>Thêm sinh viên</button></a>
+    <table>
+        <tr>
+            <th>MSV</th>
+            <th>Họ đệm</th>
+            <th>Tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Nơi sinh</th>
+            <th>Mã lớp</th>
+            
+        </tr>
+        <% for(let sinhVien of dsSinhvien){ %>
+            <tr>
+                <td><%=sinhVien.MASV%></td> 
+                <td><%=sinhVien.HODEM%></td> 
+                <td><%=sinhVien.TEN%></td> 
+                <td>
+                    <%= new Date(sinhVien.NGAYSINH).getDate() %>/
+                    <%= new Date(sinhVien.NGAYSINH).getMonth() + 1 %>/
+                    <%= new Date(sinhVien.NGAYSINH).getFullYear() %>
+                </td> 
+                <td><%=sinhVien.GIOITINH%></td> 
+                <td><%=sinhVien.NOISINH%></td> 
+                <td><%=sinhVien.MALOP%></td> 
+                <td>
+                    <a href="sua-sinh-vien/<%=sinhVien._id%>"><button>Sửa sinh viên</button></a>
+                    <a href="xoa-sinh-vien/<%=sinhVien._id%>"><button>Xóa sinh viên</button></a>
+                </td> 
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

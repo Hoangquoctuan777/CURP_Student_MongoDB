@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Thêm sinh viên</title>
+</head>
+<body>
+    <form action="/them" method="POST">
+        <table>
+            <tbody>             
+
+                <tr>
+                    <td colspan="2"><b>THÔNG TIN CÁ NHÂN</b></td>
+
+                </tr>
+
+                <tr>
+                    <td>*Họ đệm</td>
+                    <td><input type="text" name="HODEM" ></td>
+                </tr>
+            
+                <tr>
+                    <td>Tên:</td>
+                    <td><input type="text" name="TEN" ></td>
+                </tr>
+
+                <tr>
+                    <td>Giới tính:</td>
+                    <td><input type="text" name="GIOITINH"></td>
+                </tr>
+
+                <tr>
+                    <td>Ngày sinh:</td>
+                    <td><input type="date" name="NGAYSINH" ></td>
+                </tr>
+
+                <tr>
+                    <td>Nơi sinh:</td>
+                    <td><input type="text" name="NOISINH" ></td>
+                </tr>
+                <tr>
+                    <td>Mã sinh viên:</td>
+                    <td><input type="text" name="MASV"></td>
+                </tr>
+                <tr>
+                    <td>Mã lớp:</td>
+                    <td><input type="text" name="MALOP" ></td>
+                </tr>
+            
+                <tr>
+                    <td colspan="2"><input type="submit" value="Tạo mới sinh viên" /></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
